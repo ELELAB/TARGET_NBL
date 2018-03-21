@@ -18,6 +18,7 @@ Rstudio version 1.1.383 or higher
 Bioconductor version 3.6 or higher
 ```
 Required packages (for the manual installation):
+
 CRAN:
 ```
 devtools (1.13.5)
