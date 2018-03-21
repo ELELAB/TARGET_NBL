@@ -29,15 +29,15 @@ survival (2.41-3)
 ```
 Bioconductor:
 ```
-Biobase
+Biobase (2.38.0)
 BiocGenerics (0.24.0)
 BiocInstaller (1.28.0)
-DelayedArray
+DelayedArray (0.4.1)
 GenomicRanges (1.30.3)
 GenomInfoDb (1.14.0)
 IRanges (2.12.0)
 limma (3.34.9)
-matrixStats
+matrixStats (0.53.1)
 SummarizedExperiment (1.8.1)
 S4Vectors (0.16.0)
 TCGAbiolinks (2.6.12)
