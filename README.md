@@ -6,3 +6,5 @@ Indeed, we:
 - aggregated the data in the SummarizedExperiment
 - pre-processed and normalized the data
 - analyzed the available transcriptomics data to investigate the expression levels of AMBRA1 gene
+
+**We developed to this aim the R script 'Neuroblastoma.R'
