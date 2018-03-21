@@ -8,7 +8,7 @@ Indeed, we:
 - analyzed the available transcriptomics data to investigate the expression levels of AMBRA1, MIR7-3HG and cMyc depending on the tumor stage
 - performed the survival analysis for the same three targets based on 'high' or 'low' expression
 
-**We developed to this aim the R scripts 'Neuroblastoma.R' and 'SurvivalAnalysis.R'.**
+**We developed to this aim the R script 'Neuroblastoma.R'.**
 ## To run the analysis
 Required softwares:
 ```
@@ -52,12 +52,18 @@ Run the analysis
 $ Rscript Neuroblastoma.R
 ```
 **Running the script will perfom the analysis and source the script for the survival analysis from the /src directory.**
+
 **In the dir /figs there will be located the output figures of both the scripts.**
-## Note 
+
+## Notes 
+The R script 'SurvivalAnalysis.R' has been originally made by Marta Lucchetta.
 This README file uses as a template the README file made by Simon Kønig.
+
 ## Aknowledgments
 Marta Lucchetta, Simo Mounir, Simon Kønig
+
 ## Author(s)
 Maria Francesca Allega, Elena Papaleo
+
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
