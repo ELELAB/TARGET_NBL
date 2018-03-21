@@ -11,11 +11,36 @@ Indeed, we:
 ## To run the analysis
 
 ### Prerequisites
-Needed softwares:
+Required softwares:
 ```
 R version 3.3.1 or higher
 Rstudio version 1.1.383 or higher
 Bioconductor version 3.6 or higher
+```
+Required packages (for the manual installation):
+CRAN:
+```
+devtools (1.13.5)
+ggplot2 (2.2.1)
+graphics
+plyr (1.8.4)
+reshape2 (1.4.3)
+survival (2.41-3)
+```
+Bioconductor:
+```
+Biobase
+BiocGenerics (0.24.0)
+BiocInstaller (1.28.0)
+DelayedArray
+GenomicRanges (1.30.3)
+GenomInfoDb (1.14.0)
+IRanges (2.12.0)
+limma (3.34.9)
+matrixStats
+SummarizedExperiment (1.8.1)
+S4Vectors (0.16.0)
+TCGAbiolinks (2.6.12)
 ```
 ## Aknowledgments
 Marta Lucchetta, Simo Mounir, Simon Kønig
