@@ -161,8 +161,8 @@ dev.off()
 ####
 
 
-neuroblastoma.me.cMYC <- neuroblastoma.exp.me[which(neuroblastoma.exp.me$Var1=='ENSG00000136997'), ]
-## ENSEMBLE_ID of c-MYC
+neuroblastoma.me.MYCN <- neuroblastoma.exp.me[which(neuroblastoma.exp.me$Var1=='ENSG00000134323'), ]
+## ENSEMBLE_ID of MYCN
 
 neuro_cMYC.stage <- cbind(neuroblastoma.me.cMYC, neuroblastoma.exp$tumor_stage)
 
@@ -172,9 +172,9 @@ neuro_cMYC.stage <- cbind(neuroblastoma.me.cMYC, neuroblastoma.exp$tumor_stage)
  
 ## BOXPLOT: c-Myc expression levels depending on Tumor_Stage
 
-png('figs/cMYC_tumorstage_VOOM.png')
+png('figs/MYCN_tumorstage_VOOM.png')
 g <- ggplot(neuro_cMYC.stage, aes(x=neuroblastoma.exp$tumor_stage, y=value)) 
-g + geom_boxplot() + xlab("Tumor Stage") + ylab("cMYC Expression") + ggtitle("Tumor Stage and cMYC expression levels")
+g + geom_boxplot() + xlab("Tumor Stage") + ylab("MYCN Expression") + ggtitle("Tumor Stage and MYCN expression levels")
 dev.off()
 
 ####
@@ -205,14 +205,14 @@ print(cox.zph(cox.model_MIR7.25))
 print(summary(cox.model_MIR7.25))
 
 
-## For c-Myc
-clinical <- get_survival_table(dataFilt_VOOM, neuroClin, "ENSG00000136997", 0.25, 0.75)
-survival_plot(clinical,"cMYC","25")
+## For MYCN
+clinical <- get_survival_table(dataFilt_VOOM, neuroClin, "ENSG00000134323", 0.25, 0.75)
+survival_plot(clinical,"MYCN","25")
  
-cox.model_cMYC <- coxph(Surv(days_to_last_follow_up,status)~group+tumor_stage+gender,data=clinical)
+cox.model_MYCN.25 <- coxph(Surv(days_to_last_follow_up,status)~group+tumor_stage+gender,data=clinical)
 ## Test the proportionality
-print(cox.zph(cox.model_cMYC))
-print(summary(cox.model_cMYC))
+print(cox.zph(cox.model_MYCN.25))
+print(summary(cox.model_MYCN.25))
 
 
 #############
@@ -235,14 +235,14 @@ print(cox.zph(cox.model_MIR7.25))
 print(summary(cox.model_MIR7.25))
 
 
-## For c-Myc
+## For MYCN
 clinical <- get_survival_table(dataFilt_VOOM, neuroClin, "ENSG00000136997", 0.5, 0.5)
-survival_plot(clinical,"cMYC","50")
+survival_plot(clinical,"MYCN","50")
 
-cox.model_cMYC <- coxph(Surv(days_to_last_follow_up,status)~group+tumor_stage+gender,data=clinical)
+cox.model_MYCN.50 <- coxph(Surv(days_to_last_follow_up,status)~group+tumor_stage+gender,data=clinical)
 ## Test the proportionality
-print(cox.zph(cox.model_cMYC))
-print(summary(cox.model_cMYC))
+print(cox.zph(cox.model_MYCN.50))
+print(summary(cox.model_MYCN.50))
 
 
 
