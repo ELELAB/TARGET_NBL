@@ -164,7 +164,7 @@ dev.off()
 neuroblastoma.me.MYCN <- neuroblastoma.exp.me[which(neuroblastoma.exp.me$Var1=='ENSG00000134323'), ]
 ## ENSEMBLE_ID of MYCN
 
-neuro_cMYC.stage <- cbind(neuroblastoma.me.cMYC, neuroblastoma.exp$tumor_stage)
+neuro_MYCN.stage <- cbind(neuroblastoma.me.MYCN, neuroblastoma.exp$tumor_stage)
 
 
 # save(neuroblastoma.me.cMYC.stage, file = "cMYC_tumorstage.rda")
@@ -173,7 +173,7 @@ neuro_cMYC.stage <- cbind(neuroblastoma.me.cMYC, neuroblastoma.exp$tumor_stage)
 ## BOXPLOT: c-Myc expression levels depending on Tumor_Stage
 
 png('figs/MYCN_tumorstage_VOOM.png')
-g <- ggplot(neuro_cMYC.stage, aes(x=neuroblastoma.exp$tumor_stage, y=value)) 
+g <- ggplot(neuro_MYCN.stage, aes(x=neuroblastoma.exp$tumor_stage, y=value)) 
 g + geom_boxplot() + xlab("Tumor Stage") + ylab("MYCN Expression") + ggtitle("Tumor Stage and MYCN expression levels")
 dev.off()
 
@@ -236,7 +236,7 @@ print(summary(cox.model_MIR7.25))
 
 
 ## For MYCN
-clinical <- get_survival_table(dataFilt_VOOM, neuroClin, "ENSG00000136997", 0.5, 0.5)
+clinical <- get_survival_table(dataFilt_VOOM, neuroClin, "ENSG00000134323", 0.5, 0.5)
 survival_plot(clinical,"MYCN","50")
 
 cox.model_MYCN.50 <- coxph(Surv(days_to_last_follow_up,status)~group+tumor_stage+gender,data=clinical)
