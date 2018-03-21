@@ -9,8 +9,13 @@ Indeed, we:
 
 **We developed to this aim the R script 'Neuroblastoma.R'**
 ## To run the analysis
+
 ### Prerequisites
-# 
+Needed softwares:
+> R version 3.3.1 or higher
+> Rstudio version 1.1.383 or higher
+> Bioconductor version 3.6 or higher
+
 ## Aknowledgments
 Marta Lucchetta, Simo Mounir, Simon Kønig
 ## Author(s)
