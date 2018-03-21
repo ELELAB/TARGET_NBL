@@ -8,3 +8,13 @@ Indeed, we:
 - analyzed the available transcriptomics data to investigate the expression levels of AMBRA1 gene
 
 **We developed to this aim the R script 'Neuroblastoma.R'**
+## To run the analysis
+# Prerequisites
+# 
+## Aknowledgments
+Marta Lucchetta, Simo Mounir, Simon Kønig
+## Author(s)
+Maria Francesca Allega, Elena Papaleo
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
