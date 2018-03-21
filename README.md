@@ -49,6 +49,7 @@ $ git clone https://github.com/ELELAB/TARGET_NBL.git
 ```
 Run the analysis
 ```
+$ cd TARGET-NBL/
 $ Rscript Neuroblastoma.R
 ```
 **Running the script will perfom the analysis and source the script for the survival analysis from the /src directory.**
