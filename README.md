@@ -7,4 +7,4 @@ Indeed, we:
 - pre-processed and normalized the data
 - analyzed the available transcriptomics data to investigate the expression levels of AMBRA1 gene
 
-**We developed to this aim the R script 'Neuroblastoma.R'
+**We developed to this aim the R script 'Neuroblastoma.R'**
