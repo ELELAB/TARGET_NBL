@@ -5,12 +5,11 @@ Indeed, we:
 - retrieved the TARGET-NBL dataset, integrating it with the available clinical data
 - aggregated the data in the SummarizedExperiment
 - pre-processed and normalized the data
-- analyzed the available transcriptomics data to investigate the expression levels of AMBRA1 gene
+- analyzed the available transcriptomics data to investigate the expression levels of AMBRA1, MIR7-3HG and cMyc depending on the tumor stage
+- performed the survival analysis for the same three targets based on 'high' or 'low' expression
 
-**We developed to this aim the R script 'Neuroblastoma.R'**
+**We developed to this aim the R scripts 'Neuroblastoma.R' and 'SurvivalAnalysis.R'.**
 ## To run the analysis
-
-### Prerequisites
 Required softwares:
 ```
 R version 3.3.1 or higher
@@ -43,10 +42,22 @@ SummarizedExperiment (1.8.1)
 S4Vectors (0.16.0)
 TCGAbiolinks (2.6.12)
 ```
+### Effective running
+Retrieve the script and the data from GitHub
+```
+$ git clone https://github.com/ELELAB/TARGET_NBL.git
+```
+Run the analysis
+```
+$ Rscript Neuroblastoma.R
+```
+**Running the script will perfom the analysis and source the script for the survival analysis from the /src directory.**
+**In the dir /figs there will be located the output figures of both the scripts.**
+## Note 
+This README file uses as a template the README file made by Simon Kønig.
 ## Aknowledgments
 Marta Lucchetta, Simo Mounir, Simon Kønig
 ## Author(s)
 Maria Francesca Allega, Elena Papaleo
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-
