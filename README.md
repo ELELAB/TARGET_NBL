@@ -56,7 +56,7 @@ $ Rscript Neuroblastoma.R
 **In the dir /figs there will be located the output figures of both the scripts.**
 
 ## Notes 
-The R script 'SurvivalAnalysis.R' has been originally made by Marta Lucchetta.
+The R script 'SurvivalAnalysis_NEURO.R' has been originally made by Marta Lucchetta.
 
 This README file uses as a template the README file made by Simon Kønig.
 
