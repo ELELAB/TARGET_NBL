@@ -29,13 +29,13 @@ neuroblastoma.exp <- get(load("data/NeuroblastomaExp.rda"))
 ## To see dataset's features (class, dim, metadata, assays..)
 neuroblastoma.exp 
 
-View(assay(neuroblastoma.exp))
-View(colData(neuroblastoma.exp))
-dim(neuroblastoma.exp)
+# View(assay(neuroblastoma.exp))
+# View(colData(neuroblastoma.exp))
+# dim(neuroblastoma.exp)
 
 ## This will allow you to have the conversion ENSEMBLE_ID - GENE NAME 
 ## (that it's better NOT TO DO dealing with HARMONIZED DATA)
-View(rowData(neuroblastoma.exp))
+# View(rowData(neuroblastoma.exp))
       
 ## To access an assay dataset (an object can also have multiple assay datasets)
 assays(neuroblastoma.exp)$HTSeq 
@@ -93,7 +93,7 @@ dataFilt <- TCGAanalyze_Filtering(tabDF = dataNorm,
 ## To check how many genes you lost after the Filtering step
 dim(dataFilt)
 
-View(dataFilt)
+# View(dataFilt)
 
 ## The user has the possibility to save this file.
 # save(dataFilt, file = "data/Neuroblastoma_PreNormFilt.rda")
