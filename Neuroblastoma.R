@@ -1,5 +1,7 @@
-## From Simon (to check if packages are loaded and/or installed, otherwise it does it)
-setwd(getwd())
+#be sure that you are working within the directory associated to the repository 
+#setwd("~/TARGET_NBL")
+##setwd(getwd())
+## To check if packages are loaded and/or installed, otherwise it does it
 source("https://bioconductor.org/biocLite.R")
 list.of.packages <- c("devtools","TCGAbiolinks","SummarizedExperiment", "ggplot2", "limma",
                       "reshape2", "plyr", "survival", "graphics")
@@ -7,7 +9,21 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) biocLite(new.packages)
 sapply(list.of.packages, require, character.only = TRUE)
 
+#or in alternative load the required packages only
+#library(limma)
+#library(TCGAbiolinks)
+#library(SummarizedExperiment)
+#library(devtools)
+#library(ggplot2)
+#library(reshape2)
+#library(plyr)
+#library(survival)
+#library(graphics)
+#retrieve the functions for survival analysis
 source("src/SurvivalAnalysis_NEURO.R")
+
+#the line below need to be uncommented only if you wish to run the analyses on the up-to-date version of the repository
+#otherwise, if the scope is to reproduce exactly the results of this work, just load the input file below
 
 # query.exp <- GDCquery(project = "TARGET-NBL", 
 #                      data.category = "Transcriptome Profiling",
@@ -81,9 +97,10 @@ dataNorm <- TCGAanalyze_Normalization(tabDF = dataPrep,
                                       method = "gcContent")
 
 ## To see if after the normalization the MIR7-3HG is still in the dataset or has been removed
+## the same can be done on any gene of interest
 which(rownames(dataNorm)=="ENSG00000176840")   ## This is the ENSEMBLE_ID of MIR7-3HG  
 
-## To check how many genes you lost after the Normalization step
+## To check how many genes you have lost after the Normalization step
 dim(dataNorm)
 
 dataFilt <- TCGAanalyze_Filtering(tabDF = dataNorm,
@@ -95,7 +112,7 @@ dim(dataFilt)
 
 # View(dataFilt)
 
-## The user has the possibility to save this file.
+## The user has the possibility to save these files uncommenting the lines below
 # save(dataFilt, file = "data/Neuroblastoma_PreNormFilt.rda")
 # dataFilt <- get(load("data/Neuroblastoma_PreNormFilt.rda"))
 
