@@ -1,4 +1,7 @@
-# Analysis of TARGET-NBL dataset to study the functional relationship among miR-7, AMBRA1 and n-Myc in neuroblastoma
+# Computational Biology Laboratory, Danish Cancer Society Research Center, Strandboulevarden 49, 2100, Copenhagen, Denmark
+
+ 
+Analysis of TARGET-NBL dataset to study the functional relationship among miR-7, AMBRA1 and n-Myc in neuroblastoma
 We downloaded the data of neuroblastoma samples collected in the TARGET-NBL dataset, accessible through the [NCI Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/). The TARGET initiative - where TARGET stands for 'Therapeutically Applicable Research To Generate Effective Treatments' - aims at investigating the genomics of childhood cancers. The [TARGET-NBL dataset](https://ocg.cancer.gov/programs/target/projects/neuroblastoma) includes a comprehensive molecular characterization to determine the genetic changes driving the initiation and development of this aggressive cancer, accounting for ~12% of childhood cancer mortality.
 In order to do this, we used an R/Bioconductor package, i.e. [TCGAbiolinks](https://www.ncbi.nlm.nih.gov/pubmed/26704973), initially developed for The Cancer Genome Atlas (TCGA) data but later adapted also to TARGET datasets.
 Indeed, we:
@@ -59,13 +62,12 @@ $ Rscript Neuroblastoma.R
 ## Notes 
 The R script 'SurvivalAnalysis_NEURO.R' has been originally made by Marta Lucchetta.
 
-This README file uses as a template the README file made by Simon Kønig.
 
-## Aknowledgments
-Marta Lucchetta, Simo Mounir, Simon Kønig
+## Acknowledgments
+Simo Mounir, Simon Kønig
 
 ## Author(s)
-Maria Francesca Allega, Elena Papaleo
+Maria Francesca Allega, Marta Lucchetta, Elena Papaleo
 
 ## License
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE.md file for details.
